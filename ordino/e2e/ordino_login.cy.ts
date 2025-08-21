@@ -15,12 +15,42 @@ ordinoSuite(
         .step_clickLogin();
     });
 
-    it("Test - Auth Sign-in with In-Valid Credentials", () => {
-      loginPage
-        .visitUrl()
-        .step_enterUsername("AdminX")
-        .step_enterPassword("wrongPassword")
-        .step_clickLogin();
-    });
+      it("Test - Auth Sign-in with In-Valid Credentials", () => {
+        loginPage
+          .visitUrl()
+          .step_enterUsername("AdminX")
+          .step_enterPassword("wrongPassword")
+          .step_clickLogin();
+      });
+
+
+
+    //-------------
+
+ it("Test - Auth Sign-in with In-Valid Credentials", () => {
+        loginPage
+          .visitUrl()
+          .step_enterUsername("AdminX")
+          .step_enterPassword("wrongPassword")
+          .step_clickLogin();
+      }); 
+      it("Test - Auth Sign-in with In-Valid Credentials", () => {
+        loginPage
+          .visitUrl()
+          .step_enterUsername("AdminX")
+          .step_enterPassword("wrongPassword")
+          .step_clickLogin();
+      });
+       it("Test - Auth Sign-in with In-Valid Credentials", () => {
+        loginPage
+          .visitUrl()
+          .step_enterUsername("AdminX")
+          .step_enterPassword("wrongPassword")
+          .step_clickLogin();
+      });
+
+
+
   }
 );
+``
