@@ -1,0 +1,21 @@
+{
+  "name": "orangecypress",
+  "version": "1.0.0",
+  "description": "ordino-cy-test",
+  "scripts": {
+    "initialize": "node ordino.initialize.js --initialize",
+    "oi:run:test": "node ordino.initialize.js --runTest",
+    "oi:open:test": "node ordino.initialize.js --openTest"
+  },
+  "keywords": [
+    "ordino.ai",
+    "ordino-test"
+  ],
+  "author": "@ordino",
+  "license": "MIT",
+  "devDependencies": {
+    "@ordino.ai/ordino-engine": "2.2.0-cy.9",
+    "typescript": "^5.2.2",
+    "dotenv": "^16.4.7"
+  }
+}

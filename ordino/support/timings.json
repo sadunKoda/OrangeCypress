@@ -1,0 +1,12 @@
+{
+  "durations": [
+    {
+      "spec": "ordino/e2e/orange_hrm_home.cy.ts",
+      "duration": 5682
+    },
+    {
+      "spec": "ordino/e2e/orange_hrm_login.cy.ts",
+      "duration": 5716
+    }
+  ]
+}
