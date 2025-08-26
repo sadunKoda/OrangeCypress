@@ -4,7 +4,7 @@ import { OrdinoLoginPage } from "../pages/OrdinoLoginPage";
 const loginPage = new OrdinoLoginPage();
 
 ordinoSuite(
-  "OrangeHRM Home Dashboard - Test Suite",
+  "OrangeHRM Home Dashboard - Test Suite 16",
   { tags: ["@reg", "@home"] },
   () => {
     it("Test - Verify Profile Logout", { tags: "@smk" }, () => {
