@@ -1,13 +1,13 @@
 import { ordinoSuite } from "@ordino.ai/ordino-engine";
-import { OrdinoLoginPage } from "../pages/OrdinoLoginPage";
+import { OrdinoLoginPage } from "../../pages/OrdinoLoginPage";
 
 const loginPage = new OrdinoLoginPage();
 
 ordinoSuite(
-  "OrangeHRM Home Dashboard - Test Suite",
+  "OrangeHRM Home Dashboard 6- Test Suite 6",
   { tags: ["@reg", "@home"] },
   () => {
-    it("Test - Verify Profile Logout", { tags: "@smk" }, () => {
+    it("Test - Verify Dashboard Logout", { tags: "@smk" }, () => {
       loginPage
         .visitUrl()
         .step_enterUsername("Admin")
@@ -16,7 +16,7 @@ ordinoSuite(
         .step_profileOption("Logout");
     });
 
-    it("Test - Verify Given Menu Search Selection", { tags: "@smk" }, () => {
+    it("Test - Verify Dashboard Menu Search Selection", { tags: "@smk" }, () => {
       loginPage
         .visitUrl()
         .step_enterUsername("Admin")
@@ -25,7 +25,8 @@ ordinoSuite(
         .step_searchOption("Leave")
         .step_profileOption("Logout");
     });
-    it("Test - Verify Given Menu Search Selection 33", { tags: "@smk" }, () => {
+
+     it("Test - Verify Given Menu Search Dashboard 3 ", { tags: "@smk" }, () => {
       loginPage
         .visitUrl()
         .step_enterUsername("Admin")
@@ -34,7 +35,8 @@ ordinoSuite(
         .step_searchOption("Leave")
         .step_profileOption("Logout");
     });
-     it("Test - Verify Given Menu Search Selection 44", { tags: "@smk" }, () => {
+
+     it("Test - Verify Given Dashboard Selection 4", { tags: "@smk" }, () => {
       loginPage
         .visitUrl()
         .step_enterUsername("Admin")

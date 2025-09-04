@@ -1,10 +1,10 @@
 import { ordinoSuite } from "@ordino.ai/ordino-engine";
-import { OrdinoLoginPage } from "../pages/OrdinoLoginPage";
+import { OrdinoLoginPage } from "../../pages/OrdinoLoginPage";
 
 const loginPage = new OrdinoLoginPage();
 
 ordinoSuite(
-  "OrangeHRM Home Dashboard - Test Suite 17",
+  "OrangeHRM Login two - Test Suite 2",
   { tags: ["@reg", "@home"] },
   () => {
     it("Test - Verify Profile Logout", { tags: "@smk" }, () => {
@@ -16,7 +16,7 @@ ordinoSuite(
         .step_profileOption("Logout");
     });
 
-    it("Test - Verify Given Menu Search Selection", { tags: "@smk" }, () => {
+    it("Test - Verify Login Search Selection", { tags: "@smk" }, () => {
       loginPage
         .visitUrl()
         .step_enterUsername("Admin")
