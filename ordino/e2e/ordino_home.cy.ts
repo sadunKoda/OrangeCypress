@@ -25,6 +25,15 @@ ordinoSuite(
         .step_searchOption("Leave")
         .step_profileOption("Logout");
     });
+    it("Test - Verify Given Menu Search Selection 33", { tags: "@smk" }, () => {
+      loginPage
+        .visitUrl()
+        .step_enterUsername("Admin")
+        .step_enterPassword("admin123")
+        .step_clickLogin()
+        .step_searchOption("Leave")
+        .step_profileOption("Logout");
+    });
 
     //-----------------
 
