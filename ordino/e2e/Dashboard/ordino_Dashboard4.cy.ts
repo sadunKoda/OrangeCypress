@@ -28,6 +28,45 @@ ordinoSuite(
 
     //-----------------
 
+    it("Test - Verify Given Dashboard Selection fail", { tags: "@smk" }, () => {
+      loginPage
+        .visitUrl()
+        .step_enterUsername("Admin")
+        .step_enterPassword("admin123sdfd")
+        .step_clickLogin()
+        .step_searchOption("Leave")
+        .step_profileOption("Logout");
+    });
+    
+    it("Test - Verify Given Dashboard Selection fail", { tags: "@smk" }, () => {
+      loginPage
+        .visitUrl()
+        .step_enterUsername("Admin")
+        .step_enterPassword("admin123sdfd")
+        .step_clickLogin()
+        .step_searchOption("Leave")
+        .step_profileOption("Logout");
+    });
+    
+    it("Test - Verify Given Dashboard Selection fail", { tags: "@smk" }, () => {
+      loginPage
+        .visitUrl()
+        .step_enterUsername("Admin")
+        .step_enterPassword("admin123sdfd")
+        .step_clickLogin()
+        .step_searchOption("Leave")
+        .step_profileOption("Logout");
+    });
+    
+    it("Test - Verify Given Dashboard Selection fail", { tags: "@smk" }, () => {
+      loginPage
+        .visitUrl()
+        .step_enterUsername("Admin")
+        .step_enterPassword("admin123sdfd")
+        .step_clickLogin()
+        .step_searchOption("Leave")
+        .step_profileOption("Logout");
+    });
    
 
     
