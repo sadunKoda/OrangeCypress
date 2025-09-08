@@ -7,13 +7,16 @@ on:
     branches: [main, develop]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-    container:
-      image: node:20-alpine
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       
       - name: Run Ordino Tests
         uses: ORDINO-AI-LLC/github-action@v6
