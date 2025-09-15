@@ -11,6 +11,7 @@ ordinoSuite("OrangeHRM Home Dashboard one - Test Suite 3",  { tags: ["@reg", "@h
         .step_enterPassword("admin123")
         .step_clickLogin()
         .step_profileOption("Logout");
+        
     });
 
     it("Test - Verify Given Dashboard Selection", { tags: "@smk" }, () => {
