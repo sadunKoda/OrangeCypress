@@ -3,10 +3,7 @@ import { OrdinoLoginPage } from "../../pages/OrdinoLoginPage";
 
 const loginPage = new OrdinoLoginPage();
 
-ordinoSuite(
-  "OrangeHRM Home Dashboard one - Test Suite 3",
-  { tags: ["@reg", "@home"] },
-  () => {
+ordinoSuite("OrangeHRM Home Dashboard one - Test Suite 3",  { tags: ["@reg", "@home"] },  () => {
     it("Test - Verify Dashboard Logout", { tags: "@smk" }, () => {
       loginPage
         .visitUrl()
