@@ -16,7 +16,7 @@ jobs:
         shard: [1, 2, 3]
     steps:
       - uses: actions/checkout@v4
-      - uses: ORDINO-AI-LLC/github-action@v11
+      - uses: ORDINO-AI-LLC/github-action@v12
         with:
           test-framework: 'cypress'
           total-shards: '3'
@@ -38,7 +38,7 @@ jobs:
           pattern: cypress-report-*
           path: all-reports/
       
-      - uses: ORDINO-AI-LLC/github-action@v11
+      - uses: ORDINO-AI-LLC/github-action@v12
         with:
           test-framework: 'cypress'
           action-mode: 'merge-and-upload'
