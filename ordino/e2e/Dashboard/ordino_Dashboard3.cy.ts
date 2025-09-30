@@ -54,6 +54,16 @@ ordinoSuite("OrangeHRM Home Dashboard one - Test Suite 3",  { tags: ["@reg", "@h
         .step_profileOption("Logout");
     });
 
+     it("Test - Verify Given Dashboard Selection fail 2", { tags: "@smk" }, () => {
+      loginPage
+        .visitUrl()
+        .step_enterUsername("Admin")
+        .step_enterPassword("admin123sdfd")
+        .step_clickLogin()
+        .step_searchOption("Leave")
+        .step_profileOption("Logout");
+    });
+
     //-----------------
 
    
