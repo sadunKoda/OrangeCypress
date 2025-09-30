@@ -1,4 +1,6 @@
-name: Ordino Tests
+
+
+name: Ordino Cypress Tests
 
 on:
   push:
@@ -7,18 +9,36 @@ on:
     branches: [main, develop]
 
 jobs:
-  test:
+  run-tests:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        shard: [1, 2, 3]
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      
-      - name: Run Ordino Tests
-        uses: ORDINO-AI-LLC/github-action@v6
+      - uses: actions/checkout@v4
+      - uses: ORDINO-AI-LLC/github-action@12
         with:
           test-framework: 'cypress'
+          total-shards: '3'
+          shard-index: '${{ matrix.shard }}'
+          skip-upload: 'true'
+      
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cypress-report-${{ matrix.shard }}
+          path: ordino-report/
+
+  upload-report:
+    needs: run-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: cypress-report-*
+          path: all-reports/
+      
+      - uses: ORDINO-AI-LLC/github-action@12
+        with:
+          test-framework: 'cypress'
+          action-mode: 'merge-and-upload'
